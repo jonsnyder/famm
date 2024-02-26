@@ -21,15 +21,16 @@
   <!-- responsive style -->
   <link href="/css/responsive.css" rel="stylesheet" />
   <script>
-    window.digitalData = {"page":"product","products":[{"image":"p4.png","color":"red","cat1Tag":"womens","cat1Name":"Women's","cat2Tag":"dress","cat2Name":"Dress","cat3Tag":"sleeveless","cat3Name":"Sleeveless","name":"Sweetheart Sleeveless Short Tulle Homecoming Dress","price":99,"rating":4,"url":"products/004.html","id":"4004"}]};
+    window.digitalData = {"page":"product","product":{"image":"p4.png","color":"red","cat1Tag":"womens","cat1Name":"Women's","cat2Tag":"dress","cat2Name":"Dress","cat3Tag":"sleeveless","cat3Name":"Sleeveless","name":"Sweetheart Sleeveless Short Tulle Homecoming Dress","price":99,"rating":4,"url":"products/004.html","id":"4004"},"products":[{"image":"p4.png","color":"red","cat1Tag":"womens","cat1Name":"Women's","cat2Tag":"dress","cat2Name":"Dress","cat3Tag":"sleeveless","cat3Name":"Sleeveless","name":"Sweetheart Sleeveless Short Tulle Homecoming Dress","price":99,"rating":4,"url":"products/004.html","id":"4004"}]};
   </script>
   </script>
   <script>
     (function () {
-      window.defaultTagsLibrary = "https://assets.adobedtm.com/1281f6ff0c59/8b3a8c47023b/launch-0e70c8f03fb0-development.min.js";
+      window.defaultTagsLibrary = "<scr" + "ipt src=\"https://assets.adobedtm.com/22bf1a13013f/af8b0c15e5e5/launch-71eb7cb6afd7-development.min.js\" async></scr" + "ipt>";
       const tagsLibrary = window.localStorage.getItem("tagsLibrary") || window.defaultTagsLibrary;
+      const url = /src="([^"]+)"/.exec(tagsLibrary)[1];
       const tagsScript = document.createElement("script");
-      tagsScript.src = tagsLibrary;
+      tagsScript.src = url;
       tagsScript.async = true;
       document.head.appendChild(tagsScript);
     })();
@@ -183,7 +184,7 @@
           <div class="box">
             <div class="option_container">
               <div class="options">
-                <a href="/cart.html" class="addToCart" data-product-index="0">
+                <a href="#" class="addToCart" data-product-index="0">
                   Add to Cart
                 </a>
               </div>

@@ -26,10 +26,11 @@
   </script>
   <script>
     (function () {
-      window.defaultTagsLibrary = "https://assets.adobedtm.com/1281f6ff0c59/8b3a8c47023b/launch-0e70c8f03fb0-development.min.js";
+      window.defaultTagsLibrary = "<scr" + "ipt src=\"https://assets.adobedtm.com/22bf1a13013f/af8b0c15e5e5/launch-71eb7cb6afd7-development.min.js\" async></scr" + "ipt>";
       const tagsLibrary = window.localStorage.getItem("tagsLibrary") || window.defaultTagsLibrary;
+      const url = /src="([^"]+)"/.exec(tagsLibrary)[1];
       const tagsScript = document.createElement("script");
-      tagsScript.src = tagsLibrary;
+      tagsScript.src = url;
       tagsScript.async = true;
       document.head.appendChild(tagsScript);
     })();
@@ -186,7 +187,7 @@
                 <a href="/products/004.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="0">
+                <a href="#" class="addToCart" data-product-index="0">
                   Add to Cart
                 </a>
               </div>

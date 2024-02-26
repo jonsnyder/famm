@@ -26,10 +26,11 @@
   </script>
   <script>
     (function () {
-      window.defaultTagsLibrary = "https://assets.adobedtm.com/1281f6ff0c59/8b3a8c47023b/launch-0e70c8f03fb0-development.min.js";
+      window.defaultTagsLibrary = "<scr" + "ipt src=\"https://assets.adobedtm.com/22bf1a13013f/af8b0c15e5e5/launch-71eb7cb6afd7-development.min.js\" async></scr" + "ipt>";
       const tagsLibrary = window.localStorage.getItem("tagsLibrary") || window.defaultTagsLibrary;
+      const url = /src="([^"]+)"/.exec(tagsLibrary)[1];
       const tagsScript = document.createElement("script");
-      tagsScript.src = tagsLibrary;
+      tagsScript.src = url;
       tagsScript.async = true;
       document.head.appendChild(tagsScript);
     })();
@@ -186,7 +187,7 @@
                 <a href="/products/001.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="0">
+                <a href="#" class="addToCart" data-product-index="0">
                   Add to Cart
                 </a>
               </div>
@@ -213,7 +214,7 @@
                 <a href="/products/002.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="1">
+                <a href="#" class="addToCart" data-product-index="1">
                   Add to Cart
                 </a>
               </div>
@@ -240,7 +241,7 @@
                 <a href="/products/003.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="2">
+                <a href="#" class="addToCart" data-product-index="2">
                   Add to Cart
                 </a>
               </div>
@@ -267,7 +268,7 @@
                 <a href="/products/004.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="3">
+                <a href="#" class="addToCart" data-product-index="3">
                   Add to Cart
                 </a>
               </div>
@@ -294,7 +295,7 @@
                 <a href="/products/005.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="4">
+                <a href="#" class="addToCart" data-product-index="4">
                   Add to Cart
                 </a>
               </div>
@@ -321,7 +322,7 @@
                 <a href="/products/006.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="5">
+                <a href="#" class="addToCart" data-product-index="5">
                   Add to Cart
                 </a>
               </div>
@@ -348,7 +349,7 @@
                 <a href="/products/007.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="6">
+                <a href="#" class="addToCart" data-product-index="6">
                   Add to Cart
                 </a>
               </div>
@@ -375,7 +376,7 @@
                 <a href="/products/008.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="7">
+                <a href="#" class="addToCart" data-product-index="7">
                   Add to Cart
                 </a>
               </div>
@@ -402,7 +403,7 @@
                 <a href="/products/009.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="8">
+                <a href="#" class="addToCart" data-product-index="8">
                   Add to Cart
                 </a>
               </div>
@@ -429,7 +430,7 @@
                 <a href="/products/010.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="9">
+                <a href="#" class="addToCart" data-product-index="9">
                   Add to Cart
                 </a>
               </div>
@@ -456,7 +457,7 @@
                 <a href="/products/011.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="10">
+                <a href="#" class="addToCart" data-product-index="10">
                   Add to Cart
                 </a>
               </div>
@@ -483,7 +484,7 @@
                 <a href="/products/012.html" class="option1">
                   Details
                 </a>
-                <a href="/cart.html" class="addToCart" data-product-index="11">
+                <a href="#" class="addToCart" data-product-index="11">
                   Add to Cart
                 </a>
               </div>

@@ -72,12 +72,11 @@ function formatPrice(price) {
 }
 
 $(".addToCart").on("click", function (e) {
+  e.preventDefault();
   const products = window.digitalData.products;
   const productIndex = e.target.dataset.productIndex;
-  console.log(e.target.dataset.productIndex, window.digitalData.products[e.target.dataset.productIndex]);
   const cart = getCart();
   const existingIndex = cart.findIndex(p => p.id === products[productIndex].id);
-  console.log(existingIndex);
   if (existingIndex !== -1) {
     cart[existingIndex].quantity += 1;
   } else {
