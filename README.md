@@ -1,6 +1,6 @@
 # Famm
 
-Example website for Summit Lab 2024.
+Example website for Summit Lab 2024. https://adobesummit24.com
 
 ## Install
 
@@ -10,7 +10,7 @@ Website uses handlebar templates to build the site. Install dependencies with:
 npm install
 ```
 
-## Build / Run
+## Build
 
 Build site using "build.js" script.
 
