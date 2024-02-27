@@ -85,6 +85,11 @@ $(".addToCart").on("mousedown", function (e) {
   window.localStorage.setItem("cart", JSON.stringify(cart));
 });
 
+$(".clear-cart").on("click", function () {
+  window.localStorage.removeItem("cart");
+  refresh();
+});
+
 function refresh() {
   const cart = getCart();
   const total = cart.reduce((total, p) => total + (p.price * p.quantity), 0);
