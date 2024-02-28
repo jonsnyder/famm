@@ -71,7 +71,7 @@ function formatPrice(price) {
   return `$${price.toFixed(2)}`;
 }
 
-$(".addToCart").on("click", function (e) {
+$(".addToCart").on("mousedown", function (e) {
   e.preventDefault();
   const products = window.digitalData.products;
   const productIndex = e.target.dataset.productIndex;
@@ -83,6 +83,11 @@ $(".addToCart").on("click", function (e) {
     cart.push({ ...products[productIndex], quantity: 1 });
   }
   window.localStorage.setItem("cart", JSON.stringify(cart));
+});
+
+$(".clear-cart").on("click", function () {
+  window.localStorage.removeItem("cart");
+  refresh();
 });
 
 function refresh() {
