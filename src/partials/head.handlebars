@@ -39,15 +39,15 @@
         i.appendChild(y);
 
         setTimeout(function () {
-          x.parentNode && x.parentNode.removeChild(x) ||
-            y.parentNode && y.parentNode.removeChild(y);
+          x.parentNode && x.parentNode.removeChild(x);
+          y.parentNode && y.parentNode.removeChild(y);
         }, t);
 
         // When x or y is removed, remove the other.
         new MutationObserver(function () {
           if (!x.parentNode || !y.parentNode) {
-            x.parentNode && x.parentNode.removeChild(x) ||
-              y.parentNode && y.parentNode.removeChild(y);
+            x.parentNode && x.parentNode.removeChild(x);
+            y.parentNode && y.parentNode.removeChild(y);
             this.disconnect();
           }
         }).observe(i, { childList: true });
