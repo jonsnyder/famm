@@ -45,7 +45,7 @@ function myMap() {
   var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
 
-$("#tagsLibraryForm input").val(window.localStorage.getItem("tagsLibrary") || defaultTagsLibrary);
+$("#tagsLibrary").val(window.localStorage.getItem("tagsLibrary") || defaultTagsLibrary);
 
 $("#navSettings").on("click", function () {
   $("#tagsLibraryForm").toggle();
@@ -61,6 +61,19 @@ $("#tagsLibrarySubmit").on("click", function (e) {
   e.preventDefault();
   window.localStorage.setItem("tagsLibrary", $("#tagsLibraryForm input").val());
   document.location.reload();
+});
+
+$("#assuranceSession").val(window.localStorage.getItem("assuranceSessionId") || "");
+
+$("#assuranceSessionClear").on("click", function (e) {
+  e.preventDefault();
+  window.localStorage.removeItem("assuranceSessionId");
+  $("#assuranceSession").val("");
+});
+
+$("#assuranceSessionSubmit").on("click", function (e) {
+  e.preventDefault();
+  window.localStorage.setItem("assuranceSessionId", $("#assuranceSession").val());
 });
 
 function getCart() {
