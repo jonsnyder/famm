@@ -65,6 +65,12 @@ $("#tagsLibrarySubmit").on("click", function (e) {
 
 $("#assuranceSession").val(window.localStorage.getItem("assuranceSessionId") || "");
 
+$("#assuranceSessionClear").on("click", function (e) {
+  e.preventDefault();
+  window.localStorage.removeItem("assuranceSessionId");
+  $("#assuranceSession").val("");
+});
+
 $("#assuranceSessionSubmit").on("click", function (e) {
   e.preventDefault();
   window.localStorage.setItem("assuranceSessionId", $("#assuranceSession").val());
