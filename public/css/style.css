@@ -20,6 +20,17 @@ div#alloy-overlay-container {
   display: none;
 }
 
+/* Buy buttons */
+button.option2 {
+  border: none;
+  color: blue;
+  background: none;
+}
+
+button.option2:hover {
+  color: black;
+}
+
 .layout_padding {
   padding: 70px 0;
 }
@@ -506,6 +517,7 @@ a:focus {
   background-color: #000000;
   border: 1px solid #000000;
   color: #ffffff;
+  border-radius: 15px;
 }
 
 .product_section .options .addToCart:hover {
