@@ -29,6 +29,8 @@ const variables = {
   edgeConfigId: EDGE_CONFIG_ID_WITH_ANALYTICS,
   orgId: ORGANIZATION_ID,
   demoDecisionScopeName,
+  products: products.slice(0, 4),
+  addToCart: true
 };
 
 const registerPartial = (filename, name) => {
