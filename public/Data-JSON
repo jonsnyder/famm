@@ -1,0 +1,14 @@
+{
+    "data": {
+        "__adobe": {
+            "analytics": {
+                "eVar1": "L612-###",
+                "products": "Washing Machines;1234;1;1600;event3=200;eVar1=ADBE Washing Machine 2000",
+                "events": "event1,event2=2,event3:12345,event4=5:2345"
+            },
+            "target": {
+                "cartTotal": "125.99"
+            }
+        }
+    }
+}
