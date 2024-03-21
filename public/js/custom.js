@@ -152,3 +152,16 @@ $(".payment_section .submit").on("click", function (e) {
   window.localStorage.removeItem("cart");
   document.location = "/success.html";
 });
+
+$("#clearAJOStorage").on("click", function (e) {
+  e.preventDefault();
+  Object.keys(window.localStorage)
+    .filter(key => key.endsWith("decisioning.events"))
+    .forEach(key => window.localStorage.clear(key))
+});
+
+$("#debugOn").on("click", function (e) {
+  e.preventDefault();
+  window._satellite.setDebug(true);
+});
+
