@@ -63,7 +63,22 @@
     }(document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, "body { opacity: 0 !important }", 500);
 
     (function () {
-      window.defaultTagsLibrary = "<scr" + "ipt src=\"https://assets.adobedtm.com/22bf1a13013f/af8b0c15e5e5/launch-71eb7cb6afd7-development.min.js\" async></scr" + "ipt>";
+      /*
+      const addAssuranceToken = function (target, that, args) {
+        const assuranceSessionId = window.localStorage.getItem("assuranceSessionId");
+        const [url, data] = args;
+        const newUrl = assuranceSessionId ? `${url}&adobeAepValidationToken=${assuranceSessionId}` : url;
+        return target.apply(that, [newUrl, data]);
+      };
+
+      window.fetch = new Proxy(window.fetch, {
+        apply: addAssuranceToken
+      });
+      navigator.sendBeacon = new Proxy(navigator.sendBeacon, {
+        apply: addAssuranceToken
+      });
+      */
+      window.defaultTagsLibrary = "<scr" + "ipt src=\"https://assets.adobedtm.com/22bf1a13013f/963a9908e151/launch-ae60ea62d29b-development.min.js\" async></scr" + "ipt>";
       const tagsLibrary = window.localStorage.getItem("tagsLibrary") || window.defaultTagsLibrary;
       const url = /src="([^"]+)"/.exec(tagsLibrary)[1];
       const tagsScript = document.createElement("script");
@@ -234,7 +249,7 @@
           Our products
         </h3>
       </div>
-      
+
       <section class="product_section layout_padding">
         <div class="container">
           <div class="heading_container heading_center">
@@ -246,10 +261,12 @@
               <div class="box">
                 <div class="option_container">
                   <div class="options">
-                    <button class="addToCart" data-product-index="0">
+                    <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                      class="addToCart" data-product-index="0">
                       Add to Cart
                     </button>
                   </div>
+                  <div class="spinner-border" style="display: none;"></div>
                 </div>
                 <div class="detail-box">
                   <h6>
@@ -270,10 +287,12 @@
               <div class="box">
                 <div class="option_container">
                   <div class="options">
-                    <button class="addToCart" data-product-index="1">
+                    <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                      class="addToCart" data-product-index="1">
                       Add to Cart
                     </button>
                   </div>
+                  <div class="spinner-border" style="display: none;"></div>
                 </div>
                 <div class="detail-box">
                   <h6>
@@ -294,10 +313,12 @@
               <div class="box">
                 <div class="option_container">
                   <div class="options">
-                    <button class="addToCart" data-product-index="2">
+                    <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                      class="addToCart" data-product-index="2">
                       Add to Cart
                     </button>
                   </div>
+                  <div class="spinner-border" style="display: none;"></div>
                 </div>
                 <div class="detail-box">
                   <h6>
@@ -318,10 +339,12 @@
               <div class="box">
                 <div class="option_container">
                   <div class="options">
-                    <button class="addToCart" data-product-index="3">
+                    <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                      class="addToCart" data-product-index="3">
                       Add to Cart
                     </button>
                   </div>
+                  <div class="spinner-border" style="display: none;"></div>
                 </div>
                 <div class="detail-box">
                   <h6>
@@ -374,7 +397,7 @@
     </div>
   </section>
   <!-- end subscribe section -->
-  
+
   <!-- client section -->
   <section class="client_section layout_padding">
     <div class="container">
@@ -419,7 +442,7 @@
     </div>
   </section>
   <!-- end client section -->
-  
+
   <!-- footer start -->
   <footer>
     <div class="container">
@@ -457,8 +480,8 @@
                   <div class="widget_menu">
                     <h3>Account</h3>
                     <ul>
-                      <li><a href="#">Account</a></li>
-                      <li><a href="#">Checkout</a></li>
+                      <li><a href="/workbook.pdf" download>Workbook</a></li>
+                      <li><a href="/copy.html" target="_blank">Copy &amp; Paste</a></li>
                       <li><a href="#">Login</a></li>
                       <li><a href="#">Register</a></li>
                       <li><a href="#">Shopping</a></li>

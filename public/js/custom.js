@@ -71,8 +71,18 @@ function formatPrice(price) {
   return `$${price.toFixed(2)}`;
 }
 
-$(".addToCart").on("mousedown", function (e) {
+$(".addToCart").on("click", function (e) {
   e.preventDefault();
+
+  const buttons = $(e.target).parents(".options");
+  const spinner = buttons.siblings(".spinner-border");
+  buttons.hide();
+  spinner.show();
+  setTimeout(function () {
+    buttons.show();
+    spinner.hide();
+  }, 750);
+
   const products = window.digitalData.products;
   const productIndex = e.target.dataset.productIndex;
   const cart = getCart();

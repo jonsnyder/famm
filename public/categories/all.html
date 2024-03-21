@@ -62,7 +62,22 @@
     }(document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, "body { opacity: 0 !important }", 500);
 
     (function () {
-      window.defaultTagsLibrary = "<scr" + "ipt src=\"https://assets.adobedtm.com/22bf1a13013f/af8b0c15e5e5/launch-71eb7cb6afd7-development.min.js\" async></scr" + "ipt>";
+      /*
+      const addAssuranceToken = function (target, that, args) {
+        const assuranceSessionId = window.localStorage.getItem("assuranceSessionId");
+        const [url, data] = args;
+        const newUrl = assuranceSessionId ? `${url}&adobeAepValidationToken=${assuranceSessionId}` : url;
+        return target.apply(that, [newUrl, data]);
+      };
+
+      window.fetch = new Proxy(window.fetch, {
+        apply: addAssuranceToken
+      });
+      navigator.sendBeacon = new Proxy(navigator.sendBeacon, {
+        apply: addAssuranceToken
+      });
+      */
+      window.defaultTagsLibrary = "<scr" + "ipt src=\"https://assets.adobedtm.com/22bf1a13013f/963a9908e151/launch-ae60ea62d29b-development.min.js\" async></scr" + "ipt>";
       const tagsLibrary = window.localStorage.getItem("tagsLibrary") || window.defaultTagsLibrary;
       const url = /src="([^"]+)"/.exec(tagsLibrary)[1];
       const tagsScript = document.createElement("script");
@@ -218,10 +233,12 @@
                 <a href="/products/001.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="0">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="0">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -245,10 +262,12 @@
                 <a href="/products/002.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="1">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="1">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -272,10 +291,12 @@
                 <a href="/products/003.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="2">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="2">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -299,10 +320,12 @@
                 <a href="/products/004.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="3">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="3">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -326,10 +349,12 @@
                 <a href="/products/005.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="4">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="4">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -353,10 +378,12 @@
                 <a href="/products/006.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="5">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="5">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -380,10 +407,12 @@
                 <a href="/products/007.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="6">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="6">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -407,10 +436,12 @@
                 <a href="/products/008.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="7">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="7">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -434,10 +465,12 @@
                 <a href="/products/009.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="8">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="8">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -461,10 +494,12 @@
                 <a href="/products/010.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="9">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="9">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -488,10 +523,12 @@
                 <a href="/products/011.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="10">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="10">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -515,10 +552,12 @@
                 <a href="/products/012.html" class="option1">
                   Details
                 </a>
-                <button class="addToCart" data-product-index="11">
+                <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                  class="addToCart" data-product-index="11">
                   Add to Cart
                 </button>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>

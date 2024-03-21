@@ -16,11 +16,13 @@
               </a>
               {{/if}}
               {{#if ../addToCart}}
-              <button class="addToCart" data-product-index="{{@index}}">
+              <button style="padding: 8px 15px; border-radius: 30px; width: 165px; display: inline-block;"
+                class="addToCart" data-product-index="{{@index}}">
                 Add to Cart
               </button>
               {{/if}}
             </div>
+            <div class="spinner-border" style="display: none;"></div>
           </div>
           <div class="detail-box">
             <h6>

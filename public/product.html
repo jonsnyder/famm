@@ -62,7 +62,22 @@
     }(document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, "body { opacity: 0 !important }", 500);
 
     (function () {
-      window.defaultTagsLibrary = "<scr" + "ipt src=\"https://assets.adobedtm.com/22bf1a13013f/af8b0c15e5e5/launch-71eb7cb6afd7-development.min.js\" async></scr" + "ipt>";
+      /*
+      const addAssuranceToken = function (target, that, args) {
+        const assuranceSessionId = window.localStorage.getItem("assuranceSessionId");
+        const [url, data] = args;
+        const newUrl = assuranceSessionId ? `${url}&adobeAepValidationToken=${assuranceSessionId}` : url;
+        return target.apply(that, [newUrl, data]);
+      };
+
+      window.fetch = new Proxy(window.fetch, {
+        apply: addAssuranceToken
+      });
+      navigator.sendBeacon = new Proxy(navigator.sendBeacon, {
+        apply: addAssuranceToken
+      });
+      */
+      window.defaultTagsLibrary = "<scr" + "ipt src=\"https://assets.adobedtm.com/22bf1a13013f/963a9908e151/launch-ae60ea62d29b-development.min.js\" async></scr" + "ipt>";
       const tagsLibrary = window.localStorage.getItem("tagsLibrary") || window.defaultTagsLibrary;
       const url = /src="([^"]+)"/.exec(tagsLibrary)[1];
       const tagsScript = document.createElement("script");
@@ -219,6 +234,7 @@
                   Details
                 </a>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -238,6 +254,7 @@
                   Details
                 </a>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -257,6 +274,7 @@
                   Details
                 </a>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -276,6 +294,7 @@
                   Details
                 </a>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -295,6 +314,7 @@
                   Details
                 </a>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -314,6 +334,7 @@
                   Details
                 </a>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -333,6 +354,7 @@
                   Details
                 </a>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -352,6 +374,7 @@
                   Details
                 </a>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -371,6 +394,7 @@
                   Details
                 </a>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -390,6 +414,7 @@
                   Details
                 </a>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
@@ -409,6 +434,7 @@
                   Details
                 </a>
               </div>
+              <div class="spinner-border" style="display: none;"></div>
             </div>
             <div class="detail-box">
               <h6>
