@@ -157,7 +157,7 @@ $("#clearAJOStorage").on("click", function (e) {
   e.preventDefault();
   Object.keys(window.localStorage)
     .filter(key => key.endsWith("decisioning.events"))
-    .forEach(key => window.localStorage.clear(key))
+    .forEach(key => window.localStorage.removeItem(key))
 });
 
 $("#debugOn").on("click", function (e) {
